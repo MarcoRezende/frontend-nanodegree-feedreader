@@ -107,7 +107,7 @@ $(function() {
             loadFeed(0, done);
         });
 
-        it('there is at least a single .entry within the feed', function(done){
+        it('there is at least a single entry within the feed', function(done){
             expect($('.feed .entry').length).not.toBe(0);
             done();
         });
