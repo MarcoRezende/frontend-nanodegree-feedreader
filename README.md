@@ -20,9 +20,9 @@ Vejamos todas as etapas necessárias para executar o aplicativo com êxito.
 4. "New Feed Selection":
     * Verifica se o conteúdo realmente muda quando um novo feed é carregado.
 
-## Veja em tempo real
+## Resultado
 
-Acesse o [link](https://marcorezende.github.io/frontend-nanodegree-feedreader/) para ver a pagina de testes.
+[Car Image](resultadoLeitor.PNG)
 
 ## Download
 
