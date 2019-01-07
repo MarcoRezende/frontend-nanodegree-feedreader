@@ -107,17 +107,31 @@ $(function() {
             loadFeed(0, done);
         })
 
-        it('There is at least a single .entry within the feed.', function(done){
+        it('There is at least a single .entry within the feed', function(done){
             expect($('.feed .entry').length).not.toBe(0);
             done()
         })
  });
     /* TODO: Write a new test suite named "New Feed Selection" */
     describe('New Feed Selection', function(){
+        let currentFeed, latestFeed;
 
+        beforeEach(function(done) {
+            loadFeed(0, function() {
+                latestFeed = $('.feed').html();
+                loadFeed(1, function() {
+                    currentFeed = $('.feed').html();
+                });
+                done();
+            });
+        })
         /* TODO: Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
+        it('When a new feed is loaded by the loadFeed function that the content actually changes', function(done){
+            expect(currentFeed).not.toEqual(latestFeed)
+            done()
+        })
     })
 }());
