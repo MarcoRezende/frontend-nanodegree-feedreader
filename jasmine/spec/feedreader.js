@@ -39,8 +39,8 @@ $(function() {
             for(let i in allFeeds) {
                 if (allFeeds[i].url === '') {
                     defined = false;
-                }
-            }
+                };
+            };
 
             expect(defined).toBe(true)
          })
@@ -49,16 +49,16 @@ $(function() {
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
-        it('Name are defined', function(){
+        it('name are defined', function(){
             defined = true;
             for(let i in allFeeds) {
                 if (allFeeds[i].name === '') {
                     defined = false;
-                }
-            }
+                };
+            };
 
-            expect(defined).toBe(true)
-        })
+            expect(defined).toBe(true);
+        });
     });
 
     /* TODO: Write a new test suite named "The menu" */
@@ -75,14 +75,14 @@ $(function() {
                 isHidden = true;
             }
 
-            expect(isHidden).toBe(true)
+            expect(isHidden).toBe(true);
         });
          /* TODO: Write a test that ensures the menu changes
           * visibility when the menu icon is clicked. This test
           * should have two expectations: does the menu display when
           * clicked and does it hide when clicked again.
           */
-        it('the menu changes visibility when the menu icon is clicked', function() {
+        it('changes visibility when the menu icon is clicked', function() {
             let clicked = false;
 
             if ($('body').hasClass('menu-hidden')) {
@@ -90,8 +90,8 @@ $(function() {
                 expect(clicked).toBe(false)
             } else {
                 clicked = true;
-                expect(clicked).toBe(true)
-            }
+                expect(clicked).toBe(true);
+            };
         });
     });
 
@@ -105,12 +105,12 @@ $(function() {
          */
         beforeEach(function(done) {
             loadFeed(0, done);
-        })
+        });
 
-        it('There is at least a single .entry within the feed', function(done){
+        it('there is at least a single .entry within the feed', function(done){
             expect($('.feed .entry').length).not.toBe(0);
-            done()
-        })
+            done();
+        });
  });
     /* TODO: Write a new test suite named "New Feed Selection" */
     describe('New Feed Selection', function(){
@@ -124,14 +124,14 @@ $(function() {
                 });
                 done();
             });
-        })
+        });
         /* TODO: Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
-        it('When a new feed is loaded by the loadFeed function that the content actually changes', function(done){
-            expect(currentFeed).not.toEqual(latestFeed)
-            done()
-        })
-    })
+        it('content changes when a new feed is loaded by the loadFeed function', function(done){
+            expect(currentFeed).not.toEqual(latestFeed);
+            done();
+        });
+    });
 }());
