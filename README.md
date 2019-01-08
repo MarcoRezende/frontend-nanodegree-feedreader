@@ -22,7 +22,7 @@ Vejamos todas as etapas necessárias para executar o aplicativo com êxito.
 
 ## Resultado
 
-[Car Image](resultadoLeitor.PNG)
+![Demo Image](resultadoLeitor.PNG "Demo image")
 
 ## Download
 
