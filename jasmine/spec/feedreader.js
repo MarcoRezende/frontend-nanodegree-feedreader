@@ -85,13 +85,10 @@ $(function() {
         it('changes visibility when the menu icon is clicked', function() {
             let clicked = false;
 
-            if ($('body').hasClass('menu-hidden')) {
-                clicked = false;
-                expect(clicked).toBe(false)
-            } else {
-                clicked = true;
-                expect(clicked).toBe(true);
-            };
+            $('.menu-icon-link').click()
+                expect($('body').hasClass('menu-hidden')).toBe(false)
+            $('.menu-icon-link').click()
+                expect($('body').hasClass('menu-hidden')).toBe(true)
         });
     });
 
@@ -121,8 +118,8 @@ $(function() {
                 latestFeed = $('.feed').html();
                 loadFeed(1, function() {
                     currentFeed = $('.feed').html();
+                    done();
                 });
-                done();
             });
         });
         /* TODO: Write a test that ensures when a new feed is loaded
